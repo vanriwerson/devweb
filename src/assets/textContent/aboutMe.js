@@ -1,0 +1,11 @@
+const aboutMe = [
+  'Nasci em Limeira, interior de São Paulo. Tive meu primeiro contato com tecnologia ainda na infância, através de jogos eletrônicos (os clássicos Atari, Mega Drive, Super Nintendo e o poderosíssimo Brick Game) e nutri essa paixão até a vida adulta.',
+  'Possuo uma gama bem vasta de interesses. Estudo música desde os 13 anos de idade e já atuei como professor particular de violão e guitarra, fui instrumentista e vocalista em diversos projetos e pude aprimorar minha retórica, capacidade de negociação, escuta ativa e empatia, primordiais para o trabalho em conjunto. Também já trabalhei como voluntário na Biblioteca Comunitária Oficina do Saber (Salão de Leitura Zélia Gattai), ensinando origami para as crianças e aperfeiçoando minha capacidade de transmitir conhecimento.',
+  'Em 2018, comecei a aprender VBA por conta própria, pesquisando em fóruns e assistindo a tutorais, com o intuito de automatizar e agilizar processos recorrentes e repetitivos em meu trabalho. E esse foi meu pontapé inicial no desenvolvimento de software. Criei um sistema completo de pesquisa de mercado e fechamento de compras!',
+  'A partir daí minha curiosidade só aumentou. Eu busquei formas de programar para além do meu computador e poder mostrar minhas criações para todo mundo. Foi aí que me interessei por desenvolvimento web e iniciei o mesmo processo de estudar por tutoriais (minha gratidão a Gustavo Guanabara, Filipe Deschamps e ao casal nerd do canal Código Fonte TV ^^) e fóruns, o que foi muito bom para desenvolver em nível amador, mas não foi o bastante quando decidi que essa seria minha profissão.',
+  'Então iniciei o curso de tecnologia em Análise e Desenvolvimento de Sistema pela Estácio, no ano de 2021, além de cursos livres que me ajudaram a aperfeiçoar meu código e absorver boas práticas de desenvolvimento.',
+  'Coroei essa maratona de estudos com a Trybe, onde me formei Desenvolvedor Web Full-Stack em março de 2023, após pouco mais de um ano de curso com muito conhecimento adquirido, partilhado e aplicado. Aqui pude iniciar a vivência de uma pessoa desenvolvedora, trabalhando com Metodologias Ágeis e aprendendo a aprender.',
+  'Hoje atuo como desenvolvedor freelancer e continuo me aprimorando e construindo, pedacinho por pedacinho, minha carreira dos sonhos.'
+];
+
+export default aboutMe;
