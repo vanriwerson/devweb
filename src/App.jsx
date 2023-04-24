@@ -1,9 +1,9 @@
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1>Man at work</h1>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        New portfolio is coming
       </p>
     </>
   )
