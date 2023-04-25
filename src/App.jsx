@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
       <p className="read-the-docs">
         New portfolio is coming
       </p>
+
+      <Footer />
     </main>
   )
 }
