@@ -1,0 +1,13 @@
+.signature-container {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  margin: 0 40px;
+  text-decoration: none;
+}
+
+.signature:hover {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
