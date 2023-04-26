@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import skillIcons from '../../assets/images/skillIcons';
-import './style.css';
 import SkillIcon from '../SkillIcon';
+import './style.css';
 
 const CAROUSEL_REFRESH_TIME = 3000;
 
@@ -14,19 +14,6 @@ function SkillsCarousel() {
   const thirdIcon = skillIcons[currentIndex === lastIndex ? 0 : currentIndex + 1];
   const fourthIcon = skillIcons[currentIndex === lastIndex - 1 ? 0 
     : currentIndex === lastIndex ? 1 : currentIndex + 2];
-
-  const renderIcon = (icon, iconClass) => {
-    return (
-      <div className="icon-container">
-        <img
-          key={ icon.id }
-          className={ `icon ${ iconClass }` }
-          src={ icon.src }
-          alt={ `${icon.alt} icon` }
-        />
-      </div>
-    );
-  }
   
 useEffect(() => {
   const nextImage = () => {
@@ -51,10 +38,6 @@ useEffect(() => {
         <SkillIcon icon={ secondIcon } iconClass="second" />
         <SkillIcon icon={ thirdIcon } iconClass="third" />
         <SkillIcon icon={ fourthIcon } iconClass="fourth" />
-        {/* { renderIcon(firstIcon, 'first') }
-        { renderIcon(secondIcon, 'second') }
-        { renderIcon(thirdIcon, 'third') }
-        { renderIcon(fourthIcon, 'fourth') } */}
       </div>
     </section>
   );
