@@ -19,9 +19,9 @@ function SocialNetworkButton(props) {
 }
 
 SocialNetworkButton.propTypes = {
-  anchorLink: PropTypes.string,
-  imageSource: PropTypes.string,
-  altText: PropTypes.string,
+  anchorLink: PropTypes.string.isRequired,
+  imageSource: PropTypes.string.isRequired,
+  altText: PropTypes.string.isRequired,
 }
 
 export default SocialNetworkButton;
