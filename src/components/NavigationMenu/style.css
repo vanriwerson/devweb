@@ -98,13 +98,6 @@
   opacity: 0;
 }
 
-.links .link {
-  color: inherit;
-  font-size: 1.4em;
-  opacity: 0;
-  text-decoration: none;
-}
-
 .links.active {
   align-items: flex-start;
   animation: slideDown 0.4s;

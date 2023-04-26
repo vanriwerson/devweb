@@ -6,8 +6,6 @@ import Navlink from '../NavLink';
 function NavigationMenu () {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
-
-  const capitalize = (word) => `${word[0].toUpperCase()}${word.slice(1)}`;
   
   return (
     <section className='toggle-container'>
@@ -20,7 +18,7 @@ function NavigationMenu () {
       <nav className={menuOpen ? 'links active' : 'links'}>
         <ul>
           { navLinks.length && navLinks.map((link) => {
-            return <Navlink key={ link } navTo={ link } label={ capitalize(link) } />
+            return <Navlink key={ link } navTo={ link } />
           })}
         </ul>
       </nav>
