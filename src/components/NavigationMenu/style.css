@@ -1,97 +1,72 @@
+:root {
+  --toggle-button-transition: 0.7s;
+}
+
 .toggle-container {
-  align-items: flex-end;
   display: flex;
+  height: 100%;
   flex-direction: column;
-  height: fit-content;
-  margin-right: 20px;
-  position: absolute;
-  right: 0;
-  top: 25px;
-  width: 180px;
+  position: relative;
 }
 
 /* CONTROLANDO A APARÊNCIA DO BOTÃO */
 .toggle-button {
-  background-color: rgb(0, 0, 0);
-  border: 1px solid rgb(255, 255, 255);
+  align-items: center;
+  background-color: var(--main-bg);
+  border: 1px solid var(--main-txt);
   border-radius: 6px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
   height: 50px;
-  position: relative;
-  transition: 0.7s;
+  justify-content: space-evenly;
+  position: absolute;
+  right: 60px;
+  top: 25px;
+  transition: var(--toggle-button-transition);
   width: 50px;
   z-index: 100;
 }
 
 .line {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--main-txt);
   border-radius: 6px;
   height: 6px;
-  position: absolute;
-  top: calc(50% - 3px);
-  right: 7px;
-  transition: 0.7s;
-  width: 36px;
-}
-
-.line::before {
-  background-color: rgb(255, 255, 255);
-  border-radius: 6px;
-  content: '';
-  height: 6px;
-  position: absolute;
-  top: -12px;
-  transition: 0.7s;
-  width: 36px;
-}
-
-.line::after {
-  background-color: rgb(255, 255, 255);
-  border-radius: 6px;
-  content: '';
-  height: 6px;
-  position: absolute;
-  top: 12px;
-  transition: 0.7s;
+  transition: var(--toggle-button-transition);
   width: 36px;
 }
 
 .toggle-button.active {
-  border-color: rgb(69, 214, 81);
+  border-color: rgba(26, 99, 32, 0.2);
 }
 
 .toggle-button.active .line {
   background-color: transparent;
 }
 
-.toggle-button.active .line::before {
-  top: 0;
-  transform: rotate(135deg);
-  transform-origin: 18px;
-  background: rgb(69, 214, 81);
+.toggle-button.active .line.up {
+  transform: rotate(135deg) translateY(-13px);
+  transform-origin: 12px;
+  background-color:  var(--main-txt);
 }
 
-.toggle-button.active .line::after {
-  top: 0;
-  transform: rotate(225deg);
-  transform-origin: 18px;
-  background: rgb(69, 214, 81);
+.toggle-button.active .line.down {
+  transform: rotate(225deg) translateY(13px);
+  transform-origin: 13px;
+  background-color:  var(--main-txt);
 }
 
 /* CONTROLANDO A APARÊNCIA DO MENU */
 .links {
-  animation: slideUp 0.4s;
-  backdrop-filter: blur( 3px );
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--main-bg);
   border-radius: 6px;
   height: 0;
-  margin-top: 23px;
-  width: 100%;
+  margin-top: 25px;
 }
 
 .links ul {
   list-style-type: none;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .links ul li {
@@ -101,9 +76,13 @@
 .links.active {
   align-items: flex-start;
   animation: slideDown 0.4s;
+  animation-fill-mode: forwards;
   display: flex;
   height: 360px;
   justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 50px;
   z-index: 100;
 }
 
@@ -112,11 +91,6 @@
   line-height: 1.6em;
   margin: 16px;
   opacity: 1;
-}
-
-.links.active ul li:hover {
-  font-weight: bolder;
-  text-shadow: 2px 2px 2px rgb(69, 214, 81);
 }
 
 .links.active .link {
@@ -129,15 +103,13 @@
 
 @keyframes slideDown {
   from { height: 0; }
-  to   { height: 360px; }
+  to   {
+    height: 360px;
+    transform: translateY(25px);
+  }
 }
 
 @keyframes revealText {
   from { opacity: 0; }
   to   { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { height: 360px; }
-  to   { height: 0; }
 }

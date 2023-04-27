@@ -1,6 +1,21 @@
 .link {
+  align-items: center;
   color: inherit;
+  display: flex;
   font-size: 1.4em;
   opacity: 0;
   text-decoration: none;
+}
+
+.nav-icon {
+  background-color: var(--main-txt);
+  border-radius: 6px;
+  margin-right: 20px;
+  padding: 4px;
+  width: 20px;
+}
+
+.links.active .link:hover {
+  opacity: 0.6;
+  transform: scale(1.1);
 }
