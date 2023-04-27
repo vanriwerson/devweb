@@ -2,6 +2,7 @@
   border-radius: 6px;
   color: inherit;
   margin: 0 40px;
+  transition: all 0.3s;
 }
 
 .social-link:hover {
