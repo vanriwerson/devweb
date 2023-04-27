@@ -1,3 +1,7 @@
+:root {
+  --icon-animation-duration: 3s;
+}
+
 .icon-container {
   align-items: center;
   background-color: transparent;
@@ -14,12 +18,12 @@
 }
 
 .first {
-  animation: slideOut var(--animation-duration) ease-in-out;
+  animation: slideOut var(--icon-animation-duration) ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .second {
-  animation: slideFade var(--animation-duration) ease-in-out;
+  animation: slideFade var(--icon-animation-duration) ease-in-out;
   animation-fill-mode: forwards;
   height: 80px;
   opacity: 1;
@@ -27,12 +31,12 @@
 }
 
 .third {
-  animation: slideGrow var(--animation-duration) ease-in-out;
+  animation: slideGrow var(--icon-animation-duration) ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .fourth {
-  animation: slideIn var(--animation-duration) ease-in-out;
+  animation: slideIn var(--icon-animation-duration) ease-in-out;
   animation-fill-mode: forwards;
   opacity: 0;
 }
