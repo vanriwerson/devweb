@@ -2,7 +2,7 @@ import './style.css';
 
 function Logo() {
   return (
-    <a href="#top" className="logo-container">
+    <a href="#home" className="logo-container">
       <p className="logo">
         <span className="logo-sup">{'</>'}</span>
         <span className="logo-mid">BRS</span>
