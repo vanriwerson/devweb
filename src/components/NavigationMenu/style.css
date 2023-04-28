@@ -37,7 +37,7 @@
 }
 
 .toggle-button.active {
-  border-color: rgba(26, 99, 32, 0.2);
+  border-color: var(--pattern-color);
 }
 
 .toggle-button.active .line {
