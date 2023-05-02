@@ -1,0 +1,12 @@
+
+.main-logo {
+  align-items: center;
+  background-color: var(--main-bg);
+  border: 1px solid var(--main-txt);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px;
+  width: 70px;
+}
