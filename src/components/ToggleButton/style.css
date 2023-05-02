@@ -1,0 +1,45 @@
+.toggle-button {
+  align-items: center;
+  background-color: var(--main-bg);
+  border: 1px solid var(--main-txt);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  justify-content: space-evenly;
+  position: absolute;
+  right: 60px;
+  top: 25px;
+  transition: var(--toggle-button-transition);
+  width: 50px;
+  z-index: 100;
+}
+
+.line {
+  background-color: var(--main-txt);
+  border-radius: 6px;
+  height: 6px;
+  transition: var(--toggle-button-transition);
+  width: 36px;
+}
+
+.toggle-button.active {
+  border-color: var(--pattern-color);
+}
+
+.toggle-button.active .line {
+  background-color: transparent;
+}
+
+.toggle-button.active .line.up {
+  transform: rotate(135deg) translateY(-13px);
+  transform-origin: 12px;
+  background-color:  var(--main-txt);
+}
+
+.toggle-button.active .line.down {
+  transform: rotate(225deg) translateY(13px);
+  transform-origin: 13px;
+  background-color:  var(--main-txt);
+}

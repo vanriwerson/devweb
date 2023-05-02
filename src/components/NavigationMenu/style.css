@@ -9,53 +9,6 @@
   position: relative;
 }
 
-/* CONTROLANDO A APARÊNCIA DO BOTÃO */
-.toggle-button {
-  align-items: center;
-  background-color: var(--main-bg);
-  border: 1px solid var(--main-txt);
-  border-radius: 6px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  height: 50px;
-  justify-content: space-evenly;
-  position: absolute;
-  right: 60px;
-  top: 25px;
-  transition: var(--toggle-button-transition);
-  width: 50px;
-  z-index: 100;
-}
-
-.line {
-  background-color: var(--main-txt);
-  border-radius: 6px;
-  height: 6px;
-  transition: var(--toggle-button-transition);
-  width: 36px;
-}
-
-.toggle-button.active {
-  border-color: var(--pattern-color);
-}
-
-.toggle-button.active .line {
-  background-color: transparent;
-}
-
-.toggle-button.active .line.up {
-  transform: rotate(135deg) translateY(-13px);
-  transform-origin: 12px;
-  background-color:  var(--main-txt);
-}
-
-.toggle-button.active .line.down {
-  transform: rotate(225deg) translateY(13px);
-  transform-origin: 13px;
-  background-color:  var(--main-txt);
-}
-
 /* CONTROLANDO A APARÊNCIA DO MENU */
 .links {
   background-color: var(--main-bg);
@@ -66,11 +19,6 @@
 
 .links ul {
   list-style-type: none;
-  padding: 0 20px;
-}
-
-.links ul li {
-  opacity: 0;
 }
 
 .links.active {
@@ -80,9 +28,10 @@
   display: flex;
   height: 360px;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 50px;
+  z-index: 9999;
 }
 
 .links.active ul li {
@@ -90,6 +39,7 @@
   line-height: 1.6em;
   margin: 16px;
   opacity: 1;
+  z-index: 9999;
 }
 
 .links.active .link {
@@ -98,6 +48,7 @@
   opacity: 1;
   text-decoration: none;
   transition: 0.3s;
+  z-index: 9999;
 }
 
 @keyframes slideDown {

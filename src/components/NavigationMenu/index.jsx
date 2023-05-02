@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import navLinks from '../../assets/images/navLinks';
 import './style.css';
 import Navlink from '../NavLink';
+import ToggleButton from '../ToggleButton';
 
 function NavigationMenu () {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,14 +25,11 @@ function NavigationMenu () {
 
   return (
     <section className='toggle-container' ref={ menuRef }>
-      <button
-        className={ menuOpen ? 'toggle-button active' : 'toggle-button' }
-        onClick={ toggleMenu }
-      >
-        <div className='line up'></div>
-        <div className='line'></div>
-        <div className='line down'></div>
-      </button>
+      <ToggleButton
+        menuOpen={ menuOpen }
+        clickHandler={ toggleMenu }
+      />
+
       <nav className={menuOpen ? 'links active' : 'links'}>
         <ul>
           { navLinks.length && navLinks.map((link) => {
