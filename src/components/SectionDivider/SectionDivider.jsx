@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import logoIcon from '../../assets/images/temp-logo.svg';
+import logoIcon from '../../assets/images/logo-dark.svg';
 import './style.css';
 
 function SectionDivider({ anchorRef }) {
