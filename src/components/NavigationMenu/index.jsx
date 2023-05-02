@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
-import navLinks from '../../assets/images/navLinks';
-import './style.css';
 import Navlink from '../NavLink';
 import ToggleButton from '../ToggleButton';
+import navLinks from '../../assets/images/navLinks';
+import './style.css';
 
 function NavigationMenu () {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,19 +30,17 @@ function NavigationMenu () {
         clickHandler={ toggleMenu }
       />
 
-      <nav className={menuOpen ? 'links active' : 'links'}>
-        <ul>
-          { navLinks.length && navLinks.map((link) => {
-            return (
-              <Navlink
-                key={ link.id }
-                navTo={ link.navTo }
-                icon={ link.icon }
-              />
-            );
-          })}
-        </ul>
-      </nav>
+      <ul className={menuOpen ? 'links-container active' : 'links-container'}>
+        { navLinks.length && navLinks.map((link) => {
+          return (
+            <Navlink
+              key={ link.id }
+              navTo={ link.navTo }
+              icon={ link.icon }
+            />
+          );
+        })}
+      </ul>
     </section>
   );
 }

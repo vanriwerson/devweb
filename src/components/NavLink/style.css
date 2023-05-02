@@ -15,7 +15,7 @@
   width: 20px;
 }
 
-.links.active .link:hover {
+.links-container.active .link:hover {
   opacity: 0.6;
   transform: scale(1.1);
 }
