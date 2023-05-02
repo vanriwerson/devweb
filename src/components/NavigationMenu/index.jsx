@@ -37,6 +37,7 @@ function NavigationMenu () {
               key={ link.id }
               navTo={ link.navTo }
               icon={ link.icon }
+              clickHandler={ () => setMenuOpen(false) }
             />
           );
         })}
