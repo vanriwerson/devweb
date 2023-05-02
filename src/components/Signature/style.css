@@ -8,6 +8,10 @@
 }
 
 .signature {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 40px;
   transition: all 0.3s;
 }
 
@@ -17,9 +21,13 @@
 }
 
 @media screen and (max-width: 480px) {
-  .signature {
-    font-size: 0.6rem;
+  .signature-container {
     margin: auto;
     width: 320px;
+  }
+
+  .signature {
+    margin: 0;
+    width: 100%;
   }
 }
