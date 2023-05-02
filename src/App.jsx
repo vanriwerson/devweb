@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import SkillsCarousel from './components/SkillsCarousel';
 import SectionDivider from './components/SectionDivider/SectionDivider';
 import HomeSection from './components/HomeSection';
+import AboutSection from './components/AboutSection';
 
 function App() {
   return (
@@ -14,11 +15,7 @@ function App() {
       <HomeSection />
 
       <SectionDivider anchorRef='about'/>
-
-      <section className='page-section'>
-        <h1>Um pouco de minha história</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque alias enim, sequi nostrum itaque numquam delectus fugiat aliquid voluptates sunt ipsa optio accusantium. Tempora nihil non rem ipsa pariatur aliquam molestias magnam minus voluptatem unde rerum consequuntur, obcaecati aspernatur excepturi accusamus saepe soluta, quis animi. Facere neque nesciunt odio.</p>
-      </section>
+      <AboutSection />
 
       <SectionDivider anchorRef='skills'/>
 
