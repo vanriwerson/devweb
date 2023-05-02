@@ -3,6 +3,7 @@ import './App.css';
 import Footer from './components/Footer';
 import SkillsCarousel from './components/SkillsCarousel';
 import SectionDivider from './components/SectionDivider/SectionDivider';
+import HomeSection from './components/HomeSection';
 
 function App() {
   return (
@@ -10,11 +11,7 @@ function App() {
       <Header />
 
       <SectionDivider  anchorRef='home'/>
-
-      <section className='page-section'>
-        <h1>Boas-vindas ao meu Portifólio</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dignissimos. Suscipit rem accusantium repellendus dicta a harum illum nobis aliquam.</p>
-      </section>
+      <HomeSection />
 
       <SectionDivider anchorRef='about'/>
 
