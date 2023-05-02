@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import logoIcon from '../../assets/images/temp-logo.svg';
 import './style.css';
 
 function SectionDivider({ anchorRef }) {
@@ -7,7 +8,7 @@ function SectionDivider({ anchorRef }) {
       <span className='divider-line'></span>
       <img
         className='logo-icon'
-        src='src/assets/images/temp-logo.svg'
+        src={ logoIcon }
         alt='BRS DevWeb logo'
       />
       <span className='divider-line'></span>
