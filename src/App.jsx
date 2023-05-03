@@ -19,6 +19,8 @@ function App() {
 
       <SectionDivider anchorRef='skills'/>
 
+      <h1>⚠️ Desculpe pela bagunça! ^^ Site em construção ⚠️</h1>
+
       <section className='page-section'>
         <h1>Ferramentas que utilizo atualmente</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum vero facere quam aliquam id architecto commodi praesentium, sunt deleniti sit nesciunt minus saepe optio nemo dolores accusamus enim, laboriosam a?</p>
