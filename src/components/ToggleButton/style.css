@@ -9,7 +9,7 @@
   height: 50px;
   justify-content: space-evenly;
   position: absolute;
-  right: 60px;
+  right: 40px;
   top: 25px;
   transition: var(--toggle-button-transition);
   width: 50px;
