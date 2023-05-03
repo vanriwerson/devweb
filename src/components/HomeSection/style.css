@@ -1,0 +1,33 @@
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.business-card {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.business-card-text {
+  max-width: 720px;
+  text-align: justify;
+}
+
+.business-card-text .title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+  .business-card-text .title,
+  .business-card-text .content {
+    padding: 0;
+  }
+}
