@@ -1,0 +1,50 @@
+.cta-button {
+  align-items: center;
+  animation: blink 7s ease-in-out infinite;
+  background-color: var(--main-txt);
+  background-image: var(--bg-pattern);
+  border-radius: 8px;
+  color: var(--main-bg);
+  display: flex;
+  font-family: 'Rubik Mono One', sans-serif !important;
+  font-size: 1.1rem;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 480px;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.cta-button:hover {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+.icon-dark {
+  border: 2px solid var(--main-bg);
+  border-radius: 50%;
+  padding: 2px;
+  width: 48px;
+}
+
+@keyframes blink {
+  0% {
+    background-color: var(--main-txt);
+    color: var(--main-bg);
+  }
+  50% {
+    background-color: var(--main-bg);
+    color: var(--main-txt);
+  }
+  100% {
+    background-color: var(--main-txt);
+    color: var(--main-bg);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cta-button {
+    font-size: 0.7rem;
+    max-width: 320px;
+  }
+}
