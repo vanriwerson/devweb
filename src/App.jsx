@@ -1,10 +1,10 @@
 import Header from './components/Header';
-import './App.css';
 import Footer from './components/Footer';
-import SkillsCarousel from './components/SkillsCarousel';
 import SectionDivider from './components/SectionDivider/SectionDivider';
 import HomeSection from './components/HomeSection';
 import AboutSection from './components/AboutSection';
+import SkillsSection from './components/SkillsSection';
+import './App.css';
 
 function App() {
   return (
@@ -18,16 +18,10 @@ function App() {
       <AboutSection />
 
       <SectionDivider anchorRef='skills'/>
-
-      <h1>⚠️ Desculpe pela bagunça! ^^ Site em construção ⚠️</h1>
-
-      <section className='page-section'>
-        <h1>Ferramentas que utilizo atualmente</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum vero facere quam aliquam id architecto commodi praesentium, sunt deleniti sit nesciunt minus saepe optio nemo dolores accusamus enim, laboriosam a?</p>
-        <SkillsCarousel />
-      </section>
+      <SkillsSection />
 
       <SectionDivider anchorRef='projects'/>
+      <h1>⚠️ Desculpe pela bagunça! ^^ Site em construção ⚠️</h1>
 
       <section className='page-section'>
         <h1>Alguns de meus projetos de orgulho</h1>
