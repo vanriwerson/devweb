@@ -6,7 +6,7 @@ import CTAButton from '../CTAButton';
 
 function HomeSection() {
   return (
-    <section className='home'>
+    <section className='page-section'>
       <SectionTitle title={ sectionTitles.home } />
 
       <div className='business-card'>

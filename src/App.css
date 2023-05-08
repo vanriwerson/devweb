@@ -8,6 +8,14 @@
 }
 
 .page-section {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 40px;
+}
+
+@media screen and (max-width: 720px) {
+  .page-section {
+    padding: 0 20px;
+  }
 }
