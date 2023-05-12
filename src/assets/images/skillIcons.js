@@ -7,7 +7,7 @@ import typescript from '../images/skills/typescript.svg';
 import git from '../images/skills/git.svg';
 import redux from '../images/skills/redux.svg';
 import testingLibrary from '../images/skills/testing-library.png';
-import docker from '../images/skills/docker.png';
+import docker from '../images/skills/docker.svg';
 import mysql from '../images/skills/mysql.png';
 import java from '../images/skills/java.svg';
 import jest from '../images/skills/jest.png';
