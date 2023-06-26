@@ -14,72 +14,120 @@
 .icon {
   margin: 0 20px;
   opacity: 0.4;
-  width: 40px;
+  width: 20px;
 }
 
-.first {
-  animation: slideOut var(--icon-animation-duration) ease-in-out;
+.slide {
+  animation: slide var(--icon-animation-duration) ease-in-out;
   animation-fill-mode: forwards;
 }
 
-.second {
-  animation: slideFade var(--icon-animation-duration) ease-in-out;
+.md {
+  width: 40px;
+}
+
+.hidden {
+  animation: iconIn var(--icon-animation-duration) ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.sm.in {
+  animation: growMd var(--icon-animation-duration) ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.md.in {
+  animation: growLg var(--icon-animation-duration) ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.lg {
+  animation: shrinkMd var(--icon-animation-duration) ease-in-out;
   animation-fill-mode: forwards;
   height: 80px;
   opacity: 1;
   width: 80px;
 }
 
-.third {
-  animation: slideGrow var(--icon-animation-duration) ease-in-out;
+.md.out {
+  animation: shrinkSm var(--icon-animation-duration) ease-in-out;
   animation-fill-mode: forwards;
 }
 
-.fourth {
-  animation: slideIn var(--icon-animation-duration) ease-in-out;
+.fade {
+  animation: iconOut var(--icon-animation-duration) ease-in-out;
   animation-fill-mode: forwards;
-  opacity: 0;
+  opacity: 0.4;
 }
 
-@keyframes slideOut {
+@keyframes slide {
   0% {
     transform: translateX(0);
-    opacity: 0.4;
   }
   100% {
-    transform: translateX(-80px);
+    transform: translateX(-60px);
+  }
+}
+
+@keyframes iconOut {
+  0% {
+    opacity: 0.4;
+    transform: translateX(0);
+  }
+  100% {
     opacity: 0;
+    transform: translateX(-60px);
   }
 }
 
-@keyframes slideFade {
+@keyframes iconIn {
   0% {
-    transform: translateX(0) scale(1);
+    opacity: 0;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0.4;
+    transform: translateX(-60px);
+  }
+}
+
+@keyframes growMd {
+  0% {
+    transform: scale(1) translateX(0px);
+  }
+  100% {
+    transform: scale(2) translateX(-35px);
+  }
+}
+
+@keyframes growLg {
+  0% {
+    opacity: 0.4;
+    transform: scale(1) translateX(0px);
+  }
+  100% {
     opacity: 1;
-  }
-  100% {
-    transform: translateX(-80px) scale(0.5);
-    opacity: 0.4;
+    transform: scale(2) translateX(-40px);
   }
 }
 
-@keyframes slideGrow {
+@keyframes shrinkMd {
   0% {
-    transform: translateX(0);
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateX(-80px) scale(2);
     opacity: 1;
+    transform: scale(1) translateX(0px);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(0.5) translateX(-160px);
   }
 }
 
-@keyframes slideIn {
+@keyframes shrinkSm {
   0% {
-    transform: translateX(0);
+    transform: scale(1) translateX(0px);
   }
   100% {
-    transform: translateX(-80px);
-    opacity: 0.4;
+    transform: scale(0.5) translateX(-140px);
   }
 }

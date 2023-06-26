@@ -14,5 +14,5 @@
   height: 100%;
   margin: 0 auto;
   overflow: hidden;
-  width: 240px;
+  /* width: 360px; 5icons: 360px, 7icons: 480px, 9icons: 600px, 11icons: 720px */
 }
