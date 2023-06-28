@@ -1,26 +1,30 @@
 import { useState, useEffect } from 'react';
 import skillIcons from '../../assets/images/skillIcons';
 import SkillIcon from '../SkillIcon';
+import MediumCarousel from './MediumCarousel';
+import LargeCarousel from './LargeCarousel';
+import useCarouselIcons from '../../hooks/useCarouselIcons';
 import './style.css';
-import useIconsPerPage from '../../hooks/useIconsPerPage';
 
 const CAROUSEL_REFRESH_TIME = 3000;
 
 function SkillsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [iconsPerPage, classes] = useIconsPerPage();
-
-  const startIndex = currentIndex;
-  const endIndex = ((currentIndex + iconsPerPage -1) % skillIcons.length) + 1;
-
-  let visibleIcons = skillIcons.slice(startIndex, endIndex);
-  if (startIndex > endIndex) {
-    visibleIcons = skillIcons.slice(startIndex);
-    const overflow = iconsPerPage - visibleIcons.length;
-    visibleIcons = [...visibleIcons, ...skillIcons.slice(0, overflow)];
-  }
+  const [iconsPerPage, visibleIcons, classes] = useCarouselIcons(currentIndex);
 
   const renderIcons = (icons) => {
+    if (iconsPerPage === 10) {
+      return (
+        <MediumCarousel icons={ icons } iconsPerPage={ iconsPerPage } />
+      );
+    }
+
+    if (iconsPerPage === 12) {
+      return (
+        <LargeCarousel icons={ icons } iconsPerPage={ iconsPerPage } />
+      );
+    }
+    
     return (
       <div className='image-wraper' style={{ width: `${iconsPerPage * 60 }px` }}>
         { icons.map((icon, i) => (
@@ -31,16 +35,14 @@ function SkillsCarousel() {
   }
   
   useEffect(() => {
-    const nextImage = () => {
-      if (currentIndex === skillIcons.length-1) {
-        setCurrentIndex(0);
-      } else {
-        setCurrentIndex(currentIndex + 1);
-      }
+    const updateIconsList = () => {
+      const lastIndex = skillIcons.length - 1;
+      const nextIndex = currentIndex === lastIndex ? 0 : currentIndex + 1;
+      setCurrentIndex(nextIndex);
     };
 
     const interval = setInterval(() => {
-      nextImage();
+      updateIconsList();
     }, CAROUSEL_REFRESH_TIME);
 
     return () => clearInterval(interval);
@@ -48,11 +50,6 @@ function SkillsCarousel() {
 
   return (
     <section className='carousel-container'>
-      {/* <div className='image-wraper'>
-        {visibleIcons.map((icon) => (
-          <SkillIcon key={icon.id} icon={icon} iconClass={''} />
-        ))}
-      </div> */}
       { renderIcons(visibleIcons) }
     </section>
   );

@@ -1,5 +1,5 @@
 :root {
-  --icon-animation-duration: 3s;
+  --icon-animation-duration: 2.5s;
 }
 
 .icon-container {
@@ -13,7 +13,7 @@
 
 .icon {
   margin: 0 20px;
-  opacity: 0.4;
+  opacity: 0.5;
   width: 20px;
 }
 
@@ -58,7 +58,7 @@
 .fade {
   animation: iconOut var(--icon-animation-duration) ease-in-out;
   animation-fill-mode: forwards;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 @keyframes slide {
@@ -72,7 +72,7 @@
 
 @keyframes iconOut {
   0% {
-    opacity: 0.4;
+    opacity: 0.5;
     transform: translateX(0);
   }
   100% {
@@ -87,7 +87,7 @@
     transform: translateX(0px);
   }
   100% {
-    opacity: 0.4;
+    opacity: 0.5;
     transform: translateX(-60px);
   }
 }
@@ -103,7 +103,7 @@
 
 @keyframes growLg {
   0% {
-    opacity: 0.4;
+    opacity: 0.5;
     transform: scale(1) translateX(0px);
   }
   100% {
@@ -118,7 +118,7 @@
     transform: scale(1) translateX(0px);
   }
   100% {
-    opacity: 0.4;
+    opacity: 0.5;
     transform: scale(0.5) translateX(-160px);
   }
 }
