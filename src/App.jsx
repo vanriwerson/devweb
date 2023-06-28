@@ -5,6 +5,7 @@ import HomeSection from './components/HomeSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
 import './App.css';
+import ProjectsSection from './components/ProjectsSection';
 
 function App() {
   return (
@@ -21,12 +22,7 @@ function App() {
       <SkillsSection />
 
       <SectionDivider anchorRef='projects'/>
-      <h1>⚠️ Desculpe pela bagunça! ^^ Site em construção ⚠️</h1>
-
-      <section className='page-section'>
-        <h1>Alguns de meus projetos de orgulho</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident officia eaque soluta, voluptatum, eius recusandae culpa quibusdam obcaecati sapiente natus voluptates molestias blanditiis assumenda? Sint ea maxime nobis omnis odio nesciunt molestiae autem! Sequi quaerat numquam facere, architecto tempore deleniti recusandae! Fugit esse consequatur iure aut excepturi at? Molestiae, voluptates.</p>
-      </section>
+      <ProjectsSection />
 
       <Footer />
     </main>
