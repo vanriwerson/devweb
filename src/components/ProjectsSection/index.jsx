@@ -15,7 +15,7 @@ function ProjectsSection() {
       <ul>
         {projects.map((project) => (
           <li key={project.id}>
-              <h3>{project.name}</h3>
+              <h3>{project.title}</h3>
               <p>{project.description}</p>
               <p>
                 <strong>Linguagem:</strong> {project.language}
@@ -25,9 +25,9 @@ function ProjectsSection() {
                   <strong>Página:</strong> <a href={project.homepage}>{project.homepage}</a>
                 </p>
               )}
-              {project.has_pages && (
+              {project.thumb !== null && (
                 <p>
-                  <strong>Miniatura:</strong> <img src={`https://raw.githubusercontent.com/${project.full_name}/main/thumbnail.png`} alt="Miniatura" />
+                  <strong>Miniatura:</strong> <img src={project.thumb} alt="Miniatura" style={{ width: '120px' }}/>
                 </p>
               )}
           </li>
