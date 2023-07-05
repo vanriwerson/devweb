@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import skillIcons from '../../assets/images/skillIcons';
+import skillIcons from '../../utils/skillIcons';
 import SkillIcon from '../SkillIcon';
 import MediumCarousel from './MediumCarousel';
 import LargeCarousel from './LargeCarousel';

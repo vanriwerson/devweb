@@ -1,7 +1,7 @@
-import home from '../images/navIcons/home.svg';
-import about from '../images/navIcons/about.svg';
-import skills from '../images/navIcons/skills.svg';
-import projects from '../images/navIcons/projects.svg';
+import home from '../assets/images/navIcons/home.svg';
+import about from '../assets/images/navIcons/about.svg';
+import skills from '../assets/images/navIcons/skills.svg';
+import projects from '../assets/images/navIcons/projects.svg';
 
 const navLinks = [
   { id: 1, navTo: 'home', icon: home },

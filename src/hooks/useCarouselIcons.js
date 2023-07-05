@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
-import skillIcons from "../assets/images/skillIcons";
-import iconClasses from "../utils/iconClasses";
+import { useEffect, useMemo, useState } from 'react';
+import skillIcons from '../utils/skillIcons';
+import iconClasses from '../utils/iconClasses';
 
 const SM_SCREEN_WIDTH = 600;
 const MD_SCREEN_WIDTH = 720;
