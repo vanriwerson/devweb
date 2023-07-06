@@ -1,12 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import MenuDrawer from '../MenuDrawer';
 import Navlink from '../NavLink';
-import ToggleButton from '../ToggleButton';
-import navLinks from '../../assets/images/navLinks';
+import navLinks from '../../utils/navLinks';
 import './style.css';
 
-function NavigationMenu () {
+function NavigationMenu() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => setMenuOpen(!menuOpen);  
 
   const menuRef = useRef();
   
@@ -24,24 +24,22 @@ function NavigationMenu () {
   }, [menuRef]);
 
   return (
-    <section className='toggle-container' ref={ menuRef }>
-      <ToggleButton
-        menuOpen={ menuOpen }
-        clickHandler={ toggleMenu }
-      />
-
-      <ul className={menuOpen ? 'links-container active' : 'links-container'}>
-        { navLinks.length && navLinks.map((link) => {
-          return (
+    <section className='menu-container' ref={ menuRef }>
+      <MenuDrawer
+        drawerOpen={ menuOpen }
+        toggleDrawer={ toggleMenu }
+      >
+        <ul className={ menuOpen ? 'links-container active' : 'links-container' }>
+          {navLinks.map((link) => (
             <Navlink
               key={ link.id }
               navTo={ link.navTo }
               icon={ link.icon }
               clickHandler={ () => setMenuOpen(false) }
             />
-          );
-        })}
-      </ul>
+          ))}
+        </ul>
+      </MenuDrawer>
     </section>
   );
 }

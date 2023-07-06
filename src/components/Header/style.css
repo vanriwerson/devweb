@@ -8,3 +8,22 @@
   position: fixed;
   width: 100vw;
 }
+
+.large-links-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0 40px;
+}
+
+.large-links-container li {
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 720px) {
+  .large-links-container {
+    display: none;
+  }
+}
