@@ -24,22 +24,18 @@
   width: 36px;
 }
 
-.toggle-button.active {
-  border-color: var(--pattern-color);
-}
-
 .toggle-button.active .line {
   background-color: transparent;
 }
 
 .toggle-button.active .line.up {
   transform: rotate(135deg) translateY(-13px);
-  transform-origin: 12px;
+  transform-origin: 12.5px;
   background-color:  var(--main-txt);
 }
 
 .toggle-button.active .line.down {
   transform: rotate(225deg) translateY(13px);
-  transform-origin: 13px;
+  transform-origin: 12.5px;
   background-color:  var(--main-txt);
 }
