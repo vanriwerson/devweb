@@ -11,11 +11,13 @@ function Navlink({ navTo, icon, clickHandler }) {
         className='link'
         onClick={ clickHandler }
       >
-        <img
-          className='nav-icon'
-          src={ icon }
-          alt={ `${capitalize(navTo)} navigation icon` }
-        />
+        { icon && (
+          <img
+            className='nav-icon'
+            src={ icon }
+            alt={ `${capitalize(navTo)} navigation icon` }
+          />
+        ) }
         { capitalize(navTo) }
       </a>
     </li>
@@ -24,8 +26,8 @@ function Navlink({ navTo, icon, clickHandler }) {
 
 Navlink.propTypes = {
   navTo: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  clickHandler: PropTypes.func.isRequired,
+  icon: PropTypes.string,
+  clickHandler: PropTypes.func,
 };
 
 export default Navlink;

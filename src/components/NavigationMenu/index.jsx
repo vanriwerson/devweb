@@ -24,7 +24,7 @@ function NavigationMenu() {
   }, [menuRef]);
 
   return (
-    <section ref={ menuRef }>
+    <section className='menu-container' ref={ menuRef }>
       <MenuDrawer
         drawerOpen={ menuOpen }
         toggleDrawer={ toggleMenu }
