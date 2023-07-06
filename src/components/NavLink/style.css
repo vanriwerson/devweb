@@ -3,7 +3,6 @@
   color: inherit;
   display: flex;
   font-size: 1.4em;
-  opacity: 0;
   text-decoration: none;
 }
 
@@ -15,7 +14,16 @@
   width: 20px;
 }
 
-.links-container.active .link:hover {
+.link {
+  color: inherit;
+  font-size: 1.4em;
+  line-height: 1.6em;
+  margin: 8px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.link:hover {
   opacity: 0.6;
   transform: scale(1.1);
 }
