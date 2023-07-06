@@ -1,0 +1,20 @@
+* :root {
+  --toggle-button-transition: 0.7s;
+}
+
+.drawer {
+  padding-left: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: var(--main-bg);
+  transform: translateX(100%);
+  transition: transform var(--toggle-button-transition);
+  z-index: 1 !important;
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
