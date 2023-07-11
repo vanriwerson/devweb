@@ -3,6 +3,8 @@
   text-align: center;
 }
 
-.sorry {
-  margin: 20px auto;
+.projects-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

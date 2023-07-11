@@ -1,8 +1,8 @@
 import SectionTitle from '../SectionTitle';
 import sectionTitles from '../../assets/textContent/sectionTitles';
 import useProjects from '../../hooks/useProjects';
-import './style.css';
 import ProjectCard from '../ProjectCard';
+import './style.css';
 
 
 function ProjectsSection() {
@@ -11,9 +11,8 @@ function ProjectsSection() {
   return (
     <section className='page-section last'>
       <SectionTitle title={ sectionTitles.projects } />
-      
-      <h1 className='sorry'>⚠ Desculpe-me pela bagunça. Site em construção ⚠</h1>
-      <div>
+
+      <div className='projects-display'>
         {projects.map((project) => (
           <ProjectCard key={project.id} project={ project } />
         ))}
