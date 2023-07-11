@@ -1,23 +1,69 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import { useState } from "react";
+import skillIcons from "../../utils/skillIcons";
+import arrow from "../../assets/images/arrow.svg";
+import "./style.css";
 
 function ProjectCard({ project }) {
+  const [expanded, setExpanded] = useState(false);
+
+  const toggleAccordion = () => {
+    setExpanded(!expanded);
+  };
+
+  const getIcon = (language) => {
+    const icon = skillIcons.find(
+      (skill) => skill.alt.toLowerCase() === language.toLowerCase()
+    );
+    return icon.src;
+  };
+
   return (
-    <div>
-      <h3>{project.title}</h3>
-      <img src={project.thumb} alt={ `${project.title} print` } style={{ width: "120px" }} />
-      <p>{project.description}</p>
-      <p>
-        <strong>Linguagem:</strong> {project.language}
-      </p>
-      <p>
-        <a href={project.html_url}>Repo</a>
-      </p>
-      {project.homepage && (
-        <p>
-          <a href={project.homepage}>Deploy</a>
-        </p>
-      )}
-    </div>
+    <article className="project-container">
+      <div className="title-container">
+        <h4 className="project-title">{project.title}</h4>
+
+        <img
+          className="thumb"
+          src={project.thumb}
+          alt={`${project.title} thumb`}
+        />
+
+        <button className="toggle-container" onClick={toggleAccordion}>
+          <img className={ expanded ? "toggle-icon expanded" : "toggle-icon" } src={arrow} alt="arrow icon" />
+        </button>
+      </div>
+
+      <div
+        className={
+          expanded ? "accordion-content expanded" : "accordion-content"
+        }
+      >
+        {expanded && (
+          <>
+            <p>{project.description}</p>
+
+            <img
+              className="tech-icon"
+              src={getIcon(project.language)}
+              alt={project.language}
+            />
+
+            <div className="project-links-container">
+              <a href={project.html_url} target="_blank" rel="noreferrer">
+                Repo
+              </a>
+
+              {project.homepage && (
+                <a href={project.homepage} target="_blank" rel="noreferrer">
+                  Deploy
+                </a>
+              )}
+            </div>
+          </>
+        )}
+      </div>
+    </article>
   );
 }
 
