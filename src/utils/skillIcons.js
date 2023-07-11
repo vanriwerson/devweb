@@ -117,7 +117,7 @@ const skillIcons = [
   {
     id: 13,
     src: golang,
-    alt: 'Go (Golang)',
+    alt: 'Go',
     summary:
       'Linguagem de programação de código aberto criada pelo Google. É conhecida por sua simplicidade, eficiência e desempenho.',
     doc: 'https://golang.org/doc/',
