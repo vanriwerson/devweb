@@ -1,0 +1,98 @@
+.project-container {
+  margin: 20px;
+  max-width: 320px;
+  min-height: 240px;
+  padding: 20px;
+}
+
+.project-container .title-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.project-title {
+  align-items: center;
+  background-color: var(--main-txt);
+  background-image: var(--bg-pattern);
+  border-radius: 20px;
+  color: var(--main-bg);
+  display: flex;
+  font-family: 'Rubik Mono One', sans-serif !important;
+  font-size: 16px;
+  height: 60px;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.thumb {
+  border-radius: 20px;
+  width: 120px;
+}
+
+.toggle-container {
+  align-items: center;
+  background-color: var(--main-txt);
+  border-radius: 50%;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+}
+
+.toggle-icon {
+  width: 75%;
+  transition: all 0.3s ease-out;
+}
+
+.toggle-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  border-bottom: 1px solid var(--main-txt);
+  border-bottom-right-radius: 20px;
+  border-right: 1px solid var(--main-txt);
+  height: 0;
+  padding: 0 20px;
+  transition: height 0.3s ease-out;
+}
+
+.accordion-content.expanded {
+  height: 360px;
+  padding: 20px;
+}
+
+.tech-icon {
+  margin: 20px auto 0 auto;
+  width: 40px;
+}
+
+.project-links-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.project-links-container a {
+  border-radius: 20px;
+  color:  var(--main-txt);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin: auto;
+  padding: 8px 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.project-links-container a:hover {
+  background-color: var(--main-txt);
+  background-image: var(--bg-pattern);
+  color: var(--main-bg);
+}

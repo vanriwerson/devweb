@@ -1,7 +1,8 @@
 import SectionTitle from '../SectionTitle';
 import sectionTitles from '../../assets/textContent/sectionTitles';
-import './style.css';
 import useProjects from '../../hooks/useProjects';
+import ProjectCard from '../ProjectCard';
+import './style.css';
 
 
 function ProjectsSection() {
@@ -10,29 +11,12 @@ function ProjectsSection() {
   return (
     <section className='page-section last'>
       <SectionTitle title={ sectionTitles.projects } />
-      
-      <h1 className='sorry'>⚠ Desculpe-me pela bagunça. Site em construção ⚠</h1>
-      <ul>
+
+      <div className='projects-display'>
         {projects.map((project) => (
-          <li key={project.id}>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <p>
-                <strong>Linguagem:</strong> {project.language}
-              </p>
-              {project.homepage && (
-                <p>
-                  <strong>Página:</strong> <a href={project.homepage}>{project.homepage}</a>
-                </p>
-              )}
-              {project.thumb !== null && (
-                <p>
-                  <strong>Miniatura:</strong> <img src={project.thumb} alt="Miniatura" style={{ width: '120px' }}/>
-                </p>
-              )}
-          </li>
+          <ProjectCard key={project.id} project={ project } />
         ))}
-      </ul>
+      </div>
 
     </section>
   );  
