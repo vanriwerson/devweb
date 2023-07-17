@@ -1,7 +1,11 @@
 import SectionTitle from '../SectionTitle';
-import sectionTitles from '../../assets/textContent/sectionTitles';
-import useProjects from '../../hooks/useProjects';
 import ProjectCard from '../ProjectCard';
+
+import sectionTitles from '../../assets/textContent/sectionTitles';
+import aboutMyProjects from '../../assets/textContent/aboutMyProjects';
+
+import useProjects from '../../hooks/useProjects';
+
 import './style.css';
 
 
@@ -11,6 +15,12 @@ function ProjectsSection() {
   return (
     <section className='page-section last'>
       <SectionTitle title={ sectionTitles.projects } />
+
+      {aboutMyProjects.length && aboutMyProjects.map((content, i) => 
+        (
+          <p key={ i } className='content'>{ content }</p>
+        )
+      )}
 
       <div className='projects-display'>
         {projects.map((project) => (
