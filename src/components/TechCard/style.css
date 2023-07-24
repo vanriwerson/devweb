@@ -1,0 +1,17 @@
+.tech-details-wrapper {
+  align-items: center;
+  background-color: var(--main-bg);
+  background-image: var(--bg-pattern);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 480px;
+  min-width: 240px;
+  padding: 20px;
+}
+
+.tech-img {
+  margin: 0 auto 20px auto;
+  width: 80px;
+}
