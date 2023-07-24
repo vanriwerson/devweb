@@ -28,7 +28,7 @@ const useProjects = () => {
 
           return acc;
         }, []);
-        console.log(filteredProjects);
+
         setProjects(filteredProjects);
       } catch (error) {
         console.error('Erro ao buscar os projetos do GitHub:', error);
