@@ -4,6 +4,8 @@ import './style.css';
 function TechCard ({ tech }) {
   return (
     <div className='tech-details-wrapper'>
+      <h1 className='tech-name'>{ tech.alt }</h1>
+
       <img
         className='tech-img'
         src={ tech.src }
